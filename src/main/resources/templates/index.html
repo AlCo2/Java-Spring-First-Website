@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+    <center><h1>Welcome To Account Manager</h1></center>
+    </div>
+    <hr>
+    <div class="createAccount">
+    <form action="" method="POST">
+        <label for="">name</label>
+        <input type="text" name="name" id="">
+        <label for="">Gmail</label>
+        <input type="email" name="gmail" id="">
+        <label for="">Password</label>
+        <input type="password" name="password" id="">
+        <input type="submit" name="" value="Submite" id="">
+    </form>
+    </div>
+    <div class="showAccount">
+        <table style="width: 60%;">
+            <tr>
+                <th style="width: 1%">id</th>
+                <th style="width: 20%;">Name</th>
+                <th style="width: 30%;">Gmail</th>
+            </tr>
+            <tr th:each="account : ${accounts}">
+              <td th:text="${account.id}"></td>
+              <td th:text="${account.name}"></td>
+              <td th:text="${account.email}"></td>
+            </tr>
+
+          </table>
+    </div>
+</body>
+
+</html>
